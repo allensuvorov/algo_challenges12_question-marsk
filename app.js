@@ -8,14 +8,16 @@ function QuestionsMarks(str) {
         
         // check if char is a number
         if (!isNaN(char)) {
+            var first = char;
             var qmarks = 0;
             
             for (var n=i+1;n<str.length;n++) {
-                if (str.charAt(n)=="?") qmarks++;
-                if (!isNaN(str.charAt(n))) break;
+                var second = str.charAt(n);
+                if (second=="?") qmarks++;
+                if (!isNaN(second)) break;
             };
             
-            console.log(char, i, qmarks, n);
+            console.log(first, i, qmarks, second, n);
             i = n-1;
         };
     };
